@@ -1,0 +1,61 @@
+.platform-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 12px;
+  color: #000000;
+  flex-shrink: 0;
+}
+
+.platform-logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.platform-logo[data-platform="instagram"] {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-radius: 12px;
+  padding: 8px;
+  color: white;
+}
+
+.platform-logo[data-platform="twitter"] {
+  color: #1DA1F2;
+}
+
+.platform-logo[data-platform="snap"] {
+  color: #FFFC00;
+  background: #000000;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.platform-logo[data-platform="telegram"] {
+  color: #0088cc;
+}
+
+.platform-logo[data-platform="whatsapp"] {
+  color: #25D366;
+}
+
+.platform-logo[data-platform="sharing"] {
+  color: #666666;
+}
+
+@media (max-width: 768px) {
+  .platform-logo {
+    width: 40px;
+    height: 40px;
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .platform-logo {
+    width: 32px;
+    height: 32px;
+    margin: 0 6px;
+  }
+}

@@ -1,0 +1,165 @@
+.slide-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 80px;
+  overflow: hidden;
+  /* Default RTL alignment */
+  align-items: flex-start;
+  text-align: right;
+}
+
+/* Cover Slide Overrides */
+.slide-container.cover {
+  align-items: center;
+  text-align: center;
+}
+
+/* Background Image Layer */
+.slide-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  filter: brightness(0.4);
+}
+
+/* Content Layer */
+.slide-content-wrapper {
+  z-index: 1;
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+}
+
+/* Header Meta */
+.slide-meta {
+  position: absolute;
+  top: 40px;
+  right: 80px;
+  left: auto;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.6;
+}
+
+/* Typography */
+.slide-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: -webkit-linear-gradient(#fff, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+}
+
+.slide-container.cover .slide-title {
+  font-size: 4.5rem;
+}
+
+.slide-subtitle {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #FF5A5F;
+  /* Airbnb Red */
+  margin-bottom: 40px;
+}
+
+.slide-container.cover .slide-subtitle {
+  font-size: 2rem;
+}
+
+.slide-body {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.slide-body p {
+  margin-bottom: 15px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .slide-container {
+    padding: 0 40px;
+  }
+
+  .slide-meta {
+    right: 40px;
+    font-size: 12px;
+  }
+
+  .slide-title {
+    font-size: 2.8rem;
+  }
+
+  .slide-container.cover .slide-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-container {
+    padding: 0 30px;
+  }
+
+  .slide-meta {
+    right: 30px;
+    top: 30px;
+  }
+
+  .slide-title {
+    font-size: 2.2rem;
+  }
+
+  .slide-container.cover .slide-title {
+    font-size: 2.8rem;
+  }
+
+  .slide-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .slide-container.cover .slide-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .slide-body {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-container {
+    padding: 0 20px;
+  }
+
+  .slide-meta {
+    right: 20px;
+    top: 20px;
+    letter-spacing: 1px;
+  }
+
+  .slide-title {
+    font-size: 1.8rem;
+  }
+
+  .slide-container.cover .slide-title {
+    font-size: 2.2rem;
+  }
+
+  .slide-body {
+    font-size: 1.1rem;
+  }
+}
